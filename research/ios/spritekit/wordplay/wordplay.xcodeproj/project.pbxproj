@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF2006831A94191A0029CF5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2006821A94191A0029CF5F /* AppDelegate.swift */; };
+		EF2006851A94191A0029CF5F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EF2006841A94191A0029CF5F /* GameScene.sks */; };
+		EF2006871A94191A0029CF5F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2006861A94191A0029CF5F /* GameScene.swift */; };
+		EF2006891A94191A0029CF5F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2006881A94191A0029CF5F /* GameViewController.swift */; };
+		EF20068C1A94191A0029CF5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF20068A1A94191A0029CF5F /* Main.storyboard */; };
+		EF20068E1A94191A0029CF5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF20068D1A94191A0029CF5F /* Images.xcassets */; };
+		EF2006911A94191A0029CF5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF20068F1A94191A0029CF5F /* LaunchScreen.xib */; };
+		EF20069D1A94191A0029CF5F /* wordplayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF20069C1A94191A0029CF5F /* wordplayTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF2006971A94191A0029CF5F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF2006751A94191A0029CF5F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF20067C1A94191A0029CF5F;
+			remoteInfo = wordplay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF20067D1A94191A0029CF5F /* wordplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wordplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2006811A94191A0029CF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF2006821A94191A0029CF5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF2006841A94191A0029CF5F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		EF2006861A94191A0029CF5F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		EF2006881A94191A0029CF5F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		EF20068B1A94191A0029CF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF20068D1A94191A0029CF5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EF2006901A94191A0029CF5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EF2006961A94191A0029CF5F /* wordplayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wordplayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF20069B1A94191A0029CF5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF20069C1A94191A0029CF5F /* wordplayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordplayTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF20067A1A94191A0029CF5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2006931A94191A0029CF5F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF2006741A94191A0029CF5F = {
+			isa = PBXGroup;
+			children = (
+				EF20067F1A94191A0029CF5F /* wordplay */,
+				EF2006991A94191A0029CF5F /* wordplayTests */,
+				EF20067E1A94191A0029CF5F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF20067E1A94191A0029CF5F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF20067D1A94191A0029CF5F /* wordplay.app */,
+				EF2006961A94191A0029CF5F /* wordplayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF20067F1A94191A0029CF5F /* wordplay */ = {
+			isa = PBXGroup;
+			children = (
+				EF2006821A94191A0029CF5F /* AppDelegate.swift */,
+				EF2006841A94191A0029CF5F /* GameScene.sks */,
+				EF2006861A94191A0029CF5F /* GameScene.swift */,
+				EF2006881A94191A0029CF5F /* GameViewController.swift */,
+				EF20068A1A94191A0029CF5F /* Main.storyboard */,
+				EF20068D1A94191A0029CF5F /* Images.xcassets */,
+				EF20068F1A94191A0029CF5F /* LaunchScreen.xib */,
+				EF2006801A94191A0029CF5F /* Supporting Files */,
+			);
+			path = wordplay;
+			sourceTree = "<group>";
+		};
+		EF2006801A94191A0029CF5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF2006811A94191A0029CF5F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF2006991A94191A0029CF5F /* wordplayTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF20069C1A94191A0029CF5F /* wordplayTests.swift */,
+				EF20069A1A94191A0029CF5F /* Supporting Files */,
+			);
+			path = wordplayTests;
+			sourceTree = "<group>";
+		};
+		EF20069A1A94191A0029CF5F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF20069B1A94191A0029CF5F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF20067C1A94191A0029CF5F /* wordplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF2006A01A94191A0029CF5F /* Build configuration list for PBXNativeTarget "wordplay" */;
+			buildPhases = (
+				EF2006791A94191A0029CF5F /* Sources */,
+				EF20067A1A94191A0029CF5F /* Frameworks */,
+				EF20067B1A94191A0029CF5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wordplay;
+			productName = wordplay;
+			productReference = EF20067D1A94191A0029CF5F /* wordplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF2006951A94191A0029CF5F /* wordplayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF2006A31A94191A0029CF5F /* Build configuration list for PBXNativeTarget "wordplayTests" */;
+			buildPhases = (
+				EF2006921A94191A0029CF5F /* Sources */,
+				EF2006931A94191A0029CF5F /* Frameworks */,
+				EF2006941A94191A0029CF5F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF2006981A94191A0029CF5F /* PBXTargetDependency */,
+			);
+			name = wordplayTests;
+			productName = wordplayTests;
+			productReference = EF2006961A94191A0029CF5F /* wordplayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF2006751A94191A0029CF5F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = ActiveRefuge;
+				TargetAttributes = {
+					EF20067C1A94191A0029CF5F = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					EF2006951A94191A0029CF5F = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = EF20067C1A94191A0029CF5F;
+					};
+				};
+			};
+			buildConfigurationList = EF2006781A94191A0029CF5F /* Build configuration list for PBXProject "wordplay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF2006741A94191A0029CF5F;
+			productRefGroup = EF20067E1A94191A0029CF5F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF20067C1A94191A0029CF5F /* wordplay */,
+				EF2006951A94191A0029CF5F /* wordplayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF20067B1A94191A0029CF5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2006911A94191A0029CF5F /* LaunchScreen.xib in Resources */,
+				EF20068E1A94191A0029CF5F /* Images.xcassets in Resources */,
+				EF2006851A94191A0029CF5F /* GameScene.sks in Resources */,
+				EF20068C1A94191A0029CF5F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2006941A94191A0029CF5F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF2006791A94191A0029CF5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2006871A94191A0029CF5F /* GameScene.swift in Sources */,
+				EF2006891A94191A0029CF5F /* GameViewController.swift in Sources */,
+				EF2006831A94191A0029CF5F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2006921A94191A0029CF5F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF20069D1A94191A0029CF5F /* wordplayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF2006981A94191A0029CF5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF20067C1A94191A0029CF5F /* wordplay */;
+			targetProxy = EF2006971A94191A0029CF5F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF20068A1A94191A0029CF5F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF20068B1A94191A0029CF5F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF20068F1A94191A0029CF5F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF2006901A94191A0029CF5F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF20069E1A94191A0029CF5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF20069F1A94191A0029CF5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF2006A11A94191A0029CF5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = wordplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF2006A21A94191A0029CF5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = wordplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF2006A41A94191A0029CF5F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = wordplayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wordplay.app/wordplay";
+			};
+			name = Debug;
+		};
+		EF2006A51A94191A0029CF5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = wordplayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/wordplay.app/wordplay";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF2006781A94191A0029CF5F /* Build configuration list for PBXProject "wordplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF20069E1A94191A0029CF5F /* Debug */,
+				EF20069F1A94191A0029CF5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF2006A01A94191A0029CF5F /* Build configuration list for PBXNativeTarget "wordplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2006A11A94191A0029CF5F /* Debug */,
+				EF2006A21A94191A0029CF5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF2006A31A94191A0029CF5F /* Build configuration list for PBXNativeTarget "wordplayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2006A41A94191A0029CF5F /* Debug */,
+				EF2006A51A94191A0029CF5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF2006751A94191A0029CF5F /* Project object */;
+}
