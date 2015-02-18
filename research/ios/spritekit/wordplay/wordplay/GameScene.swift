@@ -7,37 +7,39 @@
 //
 
 import SpriteKit
+import CoreMotion
 
 class GameScene: SKScene {
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        //let myLabel = SKLabelNode(fontNamed:"Ariel")
-        //myLabel.text = "Hello, World!";
-        //myLabel.fontSize = 65;
-        //myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        ship = SKSpriteNode(imageNamed: "Spaceship")
-        ship!.xScale = 0.2
-        ship!.yScale = 0.2
-        ship!.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
-        
-        self.addChild(ship!)
+        self.motionManager = CMMotionManager()
+        self.motionManager!.startAccelerometerUpdates()
+        let ship = SKSpriteNode(imageNamed: "Spaceship")
+        ship.xScale = 0.2
+        ship.yScale = 0.2
+        ship.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
+        ship.name = "ship"
+        self.addChild(ship)
     }
-    var ship:SKSpriteNode? = nil
+    var motionManager:CMMotionManager? = nil
+    
     override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
+        let ship = self.childNodeWithName("ship") as SKSpriteNode
         for touch: AnyObject in touches {
             let location = touch.locationInNode(self)
             let action = SKAction.moveTo(location, duration: 0)
-            ship?.runAction(action)
-                   }
+            ship.runAction(action)
+        }
     }
+    
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
-        
+        let ship = self.childNodeWithName("ship") as SKSpriteNode
         for touch: AnyObject in touches {
             let laser = SKShapeNode(rectOfSize: CGSize(width:2, height:15));
             laser.fillColor = SKColor.whiteColor()
-            laser.position = self.ship!.position
+            laser.position = ship.position
+            laser.name = "laser"
             self.addChild(laser)
             let fire = SKAction.moveTo(CGPoint(x: laser.position.x, y: self.size.height + 15), duration: 1.0)
             laser.runAction(fire)
@@ -45,8 +47,22 @@ class GameScene: SKScene {
         }
     
     }
+    func processUserMotionForUpdate(currentTime: CFTimeInterval){
+        println("Accelerometer data recieved")
+        //SKSpriteNode* ship = (SKSpriteNode*)[self childNodeWithName:kShipName];
+        //2
+        //CMAccelerometerData* data = self.motionManager.accelerometerData;
+        //3
+        //if (fabs(data.acceleration.x) > 0.2) {
+            //4 How do you move the ship?
+        //    [ship.physicsBody applyForce:CGVectorMake(40.0 * data.acceleration.x, 0)];
+        //    NSLog(@"How do you move the ship: %@", ship);
+       // }
+
+    }
    
     override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+        self.processUserMotionForUpdate(currentTime)
+        //here is where enemy's move and collision detection happens
     }
 }
