@@ -18,19 +18,17 @@ class GameScene: SKScene {
         ship.yScale = 0.2
         ship.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         ship.name = "ship"
+        ship.physicsBody = SKPhysicsBody(rectangleOfSize: ship.frame.size)
+        ship.physicsBody!.affectedByGravity = false
+        ship.physicsBody!.mass = 0.2
+        ship.physicsBody!.dynamic = true
         self.addChild(ship)
+        //create the border physics body
+        self.physicsBody = SKPhysicsBody(edgeLoopFromRect: self.frame)
+        self.physicsBody!.friction = 0.0
     }
     var motionManager:CMMotionManager? = nil
-    
-    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
-        let ship = self.childNodeWithName("ship") as SKSpriteNode
-        for touch: AnyObject in touches {
-            let location = touch.locationInNode(self)
-            let action = SKAction.moveTo(location, duration: 0)
-            ship.runAction(action)
-        }
-    }
-    
+
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
@@ -48,17 +46,23 @@ class GameScene: SKScene {
     
     }
     func processUserMotionForUpdate(currentTime: CFTimeInterval){
-        println("Accelerometer data recieved")
-        //SKSpriteNode* ship = (SKSpriteNode*)[self childNodeWithName:kShipName];
-        //2
-        //CMAccelerometerData* data = self.motionManager.accelerometerData;
-        //3
-        //if (fabs(data.acceleration.x) > 0.2) {
-            //4 How do you move the ship?
-        //    [ship.physicsBody applyForce:CGVectorMake(40.0 * data.acceleration.x, 0)];
-        //    NSLog(@"How do you move the ship: %@", ship);
-       // }
-
+        let ship = self.childNodeWithName("ship") as SKSpriteNode
+        if(self.motionManager != nil){
+            //2
+            let data:CMAccelerometerData? = self.motionManager!.accelerometerData;
+            //3
+            if(data != nil){
+                if (fabs(data!.acceleration.y) > 0.2) {
+                    print("Acceleration Y at sample = ")
+                    println(data!.acceleration.y)
+                    let x:CGFloat = CGFloat(data!.acceleration.y) * 40.0
+                    let vector:CGVector = CGVectorMake(x, 0)
+                    ship.physicsBody!.applyForce(vector)
+                }
+            }
+        }
+        //don't let the ship leave the bounds of the board
+        let board:CGRect = self.view!.bounds;
     }
    
     override func update(currentTime: CFTimeInterval) {

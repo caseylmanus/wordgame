@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF1E6AB11B02744100FEEF0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E6AB01B02744100FEEF0B /* AppDelegate.swift */; };
+		EF1E6AB31B02744100FEEF0B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = EF1E6AB21B02744100FEEF0B /* GameScene.sks */; };
+		EF1E6AB51B02744100FEEF0B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E6AB41B02744100FEEF0B /* GameScene.swift */; };
+		EF1E6AB71B02744100FEEF0B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E6AB61B02744100FEEF0B /* GameViewController.swift */; };
+		EF1E6ABA1B02744100FEEF0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1E6AB81B02744100FEEF0B /* Main.storyboard */; };
+		EF1E6ABC1B02744100FEEF0B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1E6ABB1B02744100FEEF0B /* Images.xcassets */; };
+		EF1E6ABF1B02744100FEEF0B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF1E6ABD1B02744100FEEF0B /* LaunchScreen.xib */; };
+		EF1E6ACB1B02744100FEEF0B /* WordsAtWarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1E6ACA1B02744100FEEF0B /* WordsAtWarTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF1E6AC51B02744100FEEF0B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF1E6AA31B02744100FEEF0B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF1E6AAA1B02744100FEEF0B;
+			remoteInfo = WordsAtWar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF1E6AAB1B02744100FEEF0B /* WordsAtWar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordsAtWar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1E6AAF1B02744100FEEF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF1E6AB01B02744100FEEF0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF1E6AB21B02744100FEEF0B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		EF1E6AB41B02744100FEEF0B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		EF1E6AB61B02744100FEEF0B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		EF1E6AB91B02744100FEEF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF1E6ABB1B02744100FEEF0B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EF1E6ABE1B02744100FEEF0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EF1E6AC41B02744100FEEF0B /* WordsAtWarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordsAtWarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1E6AC91B02744100FEEF0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF1E6ACA1B02744100FEEF0B /* WordsAtWarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsAtWarTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF1E6AA81B02744100FEEF0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF1E6AC11B02744100FEEF0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF1E6AA21B02744100FEEF0B = {
+			isa = PBXGroup;
+			children = (
+				EF1E6AAD1B02744100FEEF0B /* WordsAtWar */,
+				EF1E6AC71B02744100FEEF0B /* WordsAtWarTests */,
+				EF1E6AAC1B02744100FEEF0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF1E6AAC1B02744100FEEF0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF1E6AAB1B02744100FEEF0B /* WordsAtWar.app */,
+				EF1E6AC41B02744100FEEF0B /* WordsAtWarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF1E6AAD1B02744100FEEF0B /* WordsAtWar */ = {
+			isa = PBXGroup;
+			children = (
+				EF1E6AB01B02744100FEEF0B /* AppDelegate.swift */,
+				EF1E6AB21B02744100FEEF0B /* GameScene.sks */,
+				EF1E6AB41B02744100FEEF0B /* GameScene.swift */,
+				EF1E6AB61B02744100FEEF0B /* GameViewController.swift */,
+				EF1E6AB81B02744100FEEF0B /* Main.storyboard */,
+				EF1E6ABB1B02744100FEEF0B /* Images.xcassets */,
+				EF1E6ABD1B02744100FEEF0B /* LaunchScreen.xib */,
+				EF1E6AAE1B02744100FEEF0B /* Supporting Files */,
+			);
+			path = WordsAtWar;
+			sourceTree = "<group>";
+		};
+		EF1E6AAE1B02744100FEEF0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF1E6AAF1B02744100FEEF0B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF1E6AC71B02744100FEEF0B /* WordsAtWarTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF1E6ACA1B02744100FEEF0B /* WordsAtWarTests.swift */,
+				EF1E6AC81B02744100FEEF0B /* Supporting Files */,
+			);
+			path = WordsAtWarTests;
+			sourceTree = "<group>";
+		};
+		EF1E6AC81B02744100FEEF0B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF1E6AC91B02744100FEEF0B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF1E6AAA1B02744100FEEF0B /* WordsAtWar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF1E6ACE1B02744100FEEF0B /* Build configuration list for PBXNativeTarget "WordsAtWar" */;
+			buildPhases = (
+				EF1E6AA71B02744100FEEF0B /* Sources */,
+				EF1E6AA81B02744100FEEF0B /* Frameworks */,
+				EF1E6AA91B02744100FEEF0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WordsAtWar;
+			productName = WordsAtWar;
+			productReference = EF1E6AAB1B02744100FEEF0B /* WordsAtWar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF1E6AC31B02744100FEEF0B /* WordsAtWarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF1E6AD11B02744100FEEF0B /* Build configuration list for PBXNativeTarget "WordsAtWarTests" */;
+			buildPhases = (
+				EF1E6AC01B02744100FEEF0B /* Sources */,
+				EF1E6AC11B02744100FEEF0B /* Frameworks */,
+				EF1E6AC21B02744100FEEF0B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF1E6AC61B02744100FEEF0B /* PBXTargetDependency */,
+			);
+			name = WordsAtWarTests;
+			productName = WordsAtWarTests;
+			productReference = EF1E6AC41B02744100FEEF0B /* WordsAtWarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF1E6AA31B02744100FEEF0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = caseylmanus.github.io;
+				TargetAttributes = {
+					EF1E6AAA1B02744100FEEF0B = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					EF1E6AC31B02744100FEEF0B = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = EF1E6AAA1B02744100FEEF0B;
+					};
+				};
+			};
+			buildConfigurationList = EF1E6AA61B02744100FEEF0B /* Build configuration list for PBXProject "WordsAtWar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF1E6AA21B02744100FEEF0B;
+			productRefGroup = EF1E6AAC1B02744100FEEF0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF1E6AAA1B02744100FEEF0B /* WordsAtWar */,
+				EF1E6AC31B02744100FEEF0B /* WordsAtWarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF1E6AA91B02744100FEEF0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1E6ABF1B02744100FEEF0B /* LaunchScreen.xib in Resources */,
+				EF1E6ABC1B02744100FEEF0B /* Images.xcassets in Resources */,
+				EF1E6AB31B02744100FEEF0B /* GameScene.sks in Resources */,
+				EF1E6ABA1B02744100FEEF0B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF1E6AC21B02744100FEEF0B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF1E6AA71B02744100FEEF0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1E6AB51B02744100FEEF0B /* GameScene.swift in Sources */,
+				EF1E6AB71B02744100FEEF0B /* GameViewController.swift in Sources */,
+				EF1E6AB11B02744100FEEF0B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF1E6AC01B02744100FEEF0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF1E6ACB1B02744100FEEF0B /* WordsAtWarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF1E6AC61B02744100FEEF0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF1E6AAA1B02744100FEEF0B /* WordsAtWar */;
+			targetProxy = EF1E6AC51B02744100FEEF0B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF1E6AB81B02744100FEEF0B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF1E6AB91B02744100FEEF0B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF1E6ABD1B02744100FEEF0B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF1E6ABE1B02744100FEEF0B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF1E6ACC1B02744100FEEF0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF1E6ACD1B02744100FEEF0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF1E6ACF1B02744100FEEF0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WordsAtWar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF1E6AD01B02744100FEEF0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WordsAtWar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF1E6AD21B02744100FEEF0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WordsAtWarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordsAtWar.app/WordsAtWar";
+			};
+			name = Debug;
+		};
+		EF1E6AD31B02744100FEEF0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WordsAtWarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordsAtWar.app/WordsAtWar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF1E6AA61B02744100FEEF0B /* Build configuration list for PBXProject "WordsAtWar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF1E6ACC1B02744100FEEF0B /* Debug */,
+				EF1E6ACD1B02744100FEEF0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF1E6ACE1B02744100FEEF0B /* Build configuration list for PBXNativeTarget "WordsAtWar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF1E6ACF1B02744100FEEF0B /* Debug */,
+				EF1E6AD01B02744100FEEF0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF1E6AD11B02744100FEEF0B /* Build configuration list for PBXNativeTarget "WordsAtWarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF1E6AD21B02744100FEEF0B /* Debug */,
+				EF1E6AD31B02744100FEEF0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF1E6AA31B02744100FEEF0B /* Project object */;
+}

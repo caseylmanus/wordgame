@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react/dist/JSXTransformer.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/react-bootstrap/dist/react-bootstrap.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <style>
+      table, th, td {
+        border: 1px solid black;
+      }
+      td, tr{
+        width: 40px;
+        height: 40px;
+        text-align: center;
+      }
+      .cmdButton {
+        margin-top: 10px;
+        margin-right:10px;
+        margin-left:5px;
+      }
+      .highlightItem {
+        color: red;
+        background-color: yellow;
+        border-color:red;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="text/jsx">
+    var events = require("events");
+    var fs = require("fs");
+    var eventBus = new events.EventEmitter();
+    var WordDirection = {
+       RIGHT: 'rotate(0deg)',
+       RIGHT_DOWN: 'rotate(45deg)',
+       DOWN: 'rotate(90deg)',
+       LEFT_DOWN: 'rotate(135deg)',
+       LEFT: 'rotate(180deg)',
+       LEFT_UP:'rotate(225deg)',
+       UP: 'rotate(270deg)',
+       RIGHT_UP: 'rotate(315deg)'
+    }
+    var bs = ReactBootstrap;
+    function getRandomLetter(){
+      //note extra char at end, 1.0 is never a valid result of math.random, therefore z would never show otherwise.
+      var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', 'z'];
+      return alphabet[Math.floor(Math.random()*alphabet.length)];
+    }
+
+    var WordModal = React.createClass({
+         getInitialState: function(){
+            return { 
+              direction: WordDirection.RIGHT,
+              currentDirectionIndex: 0,
+              word: null
+            };
+         },
+         rotateDirection: function(){
+            var newIndex = this.state.currentDirectionIndex + 1;
+            if(newIndex > 7 ){
+              newIndex = 0;
+            }
+            var keys = Object.keys(WordDirection);
+            var newState = {
+              direction: WordDirection[keys[newIndex]],
+              currentDirectionIndex : newIndex
+            }
+            this.setState(newState);
+         },
+         textChange: function(e){
+            this.setState({word: e.target.value});
+         },
+         save: function(){
+            var data = {
+              word: this.state.word.toLowerCase(), 
+              location: this.props.item, 
+              direction: this.state.currentDirectionIndex
+            };
+            eventBus.emit("ITEM_SAVED", data);
+            this.props.onRequestHide();
+
+         },
+         render: function(){
+            return (<bs.Modal title='Add Word' onRequestHide={function() {}}>
+                <div className='modal-body'>
+                  <bs.Input type="text" value={this.state.word} onChange={this.textChange} placeholder="enter word..." />
+                  Direction:  <img style={{'transform': this.state.direction}}src="arrow.jpg" onClick={this.rotateDirection} width="30"/>
+                </div>
+                <div className='modal-footer'>
+                  <bs.Button onClick={this.props.onRequestHide}>Close</bs.Button>
+                  <bs.Button bsStyle='primary' onClick={this.save}>Save changes</bs.Button>
+                </div>
+              </bs.Modal>)
+         }
+    });
+    var GridItem = React.createClass({
+        render: function(){
+            return (
+                 <bs.ModalTrigger modal={<WordModal item={this.props.item}/>}>
+                     <button className={this.props.item.used ? 'highlightItem' : 'gridItem'} onClick={this.onClick}>
+                      {this.props.item.letter}
+                    </button>
+                 </bs.ModalTrigger>
+            )
+        }
+    });
+    var Main = React.createClass({
+      componentDidMount: function(){
+         eventBus.on("ITEM_SAVED", this.itemSaved);
+      },
+      itemSaved: function(data){
+          var location = data.location;
+          var word = data.word;
+          var direction = data.direction;
+          var increment = function(val, i){return val + i;};
+          var decrement = function(val, i){return val - i;};
+          var noop = function(val, i){return val;};
+          //make the word show up in the board
+          switch(direction){
+              case 0: //right
+                this.place(location, word, noop, increment);
+                break;
+              case 1: //rightdown
+                this.place(location, word, increment, increment); 
+                break;
+              case 2: //down
+                this.place(location, word, increment, noop);
+              break;
+              case 3: //leftdown
+                this.place(location, word, increment, decrement);
+              break;
+              case 4: //left
+                this.place(location, word, noop, decrement);
+              break;
+              case 5://left up
+                this.place(location, word, decrement, decrement);
+              break;
+              case 6: //up
+                this.place(location, word, decrement, noop);
+              break;
+              case 7: //upright
+                this.place(location, word, decrement, increment);
+              break;
+          }
+          this.forceUpdate();
+
+      },
+      place: function(location, word, funcY, funcX){
+        //first test basic positioning
+        var x = funcX(location.x, word.length - 1);
+        var y = funcY(location.y, word.length - 1);
+        if(x > 9 || x < 0 || y > 9 || y < 0){
+           alert("Invalid position for word: " + word);
+           return;
+        }
+        var level = this.state.level;
+        //do conflict testing
+        for(var i=0; i< word.length; i++){
+          var item = level.grid[funcY(location.y, i)][funcX(location.x, i)];
+          if(item.letter != word[i] && item.used){
+            alert("This word conflicts with a previous word");
+            return;
+          }
+        }
+        //do placement
+        for(var i=0; i< word.length;i++){
+            var item = level.grid[funcY(location.y, i)][funcX(location.x, i)];
+            item.letter = word[i];
+            item.used = true;
+        }
+        level.words.push(word);
+      },
+      reset: function(){
+         this.setState(this.getInitialState());
+      },
+      save: function(){
+          var data = JSON.stringify(this.state);
+          fs.writeFileSync("levels.json", data);
+      },
+      load: function(){
+
+      },
+      getInitialState: function(){
+         var rows = [];
+         for(var y = 0; y < 10; y++){
+            var cols = [];
+            for(var x = 0; x < 10; x++){
+                cols.push({x: x, y : y, letter: getRandomLetter(), used:false});
+            }
+            rows.push(cols);
+         }
+         return {
+           currentLevelIndex: 0,
+           savedLevels:[],
+           level: { 
+            grid: rows,
+            words: []
+          }
+         };
+
+      },
+      render: function(){
+          var grid = this.state.level.grid;
+          return(
+          <div>
+            <bs.Navbar brand='WordsAtWar Level Editor'/>
+              <bs.Panel> 
+          <table>
+           {grid.map(function(row, i){
+              return (<tr>
+                  {row.map(function(col, i){
+                    return (<td><GridItem item={col}/></td>)
+                  })}
+                </tr>)
+           })}
+          </table>  
+            
+            <bs.Button className="cmdButton" onClick={this.reset}>New Level</bs.Button>
+            <bs.Button className="cmdButton" onClick={this.save}>Save Config</bs.Button>
+            <bs.Button className="cmdButton" onClick={this.load}>Load Config</bs.Button>
+            <h3>Words</h3>
+            <ul>
+              {this.state.level.words.map(function(word, x){
+                return (<li>{word}</li>)
+              })}
+            </ul>
+            </bs.Panel>
+        </div>)
+      }
+
+      });
+      React.render(
+        (<Main/>),
+        document.body      );
+    </script>
+  </body>
+</html>
