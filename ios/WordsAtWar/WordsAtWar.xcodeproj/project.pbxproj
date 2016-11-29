@@ -162,6 +162,7 @@
 		EF1E6AA31B02744100FEEF0B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = caseylmanus.github.io;
 				TargetAttributes = {
@@ -415,6 +416,7 @@
 				EF1E6AD01B02744100FEEF0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF1E6AD11B02744100FEEF0B /* Build configuration list for PBXNativeTarget "WordsAtWarTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +425,7 @@
 				EF1E6AD31B02744100FEEF0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
